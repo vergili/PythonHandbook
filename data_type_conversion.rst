@@ -11,7 +11,7 @@ These functions return a new object representing the converted value.
 | Function               | Description                                                              |
 +========================+==========================================================================+
 | int(x [,base])         | Converts x to an integer. base specifies the base if x is a string.      |
-| ``default base=10``    | ``Exp: int('11111111', 2) = 255``                                     |
+| ``default base=10``    | ``Exp: int('11111111', 2) = 255``                                        |
 +------------------------+--------------------------------------------------------------------------+
 | long(x [,base] )       | Converts x to a long integer. base specifies the base if x is a string.  |
 +------------------------+--------------------------------------------------------------------------+
