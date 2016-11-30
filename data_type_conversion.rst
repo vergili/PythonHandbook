@@ -1,5 +1,5 @@
-Built-in Data Types
--------------------
+Data Types Conversion
+---------------------
 Data Type Conversion
 Sometimes, you may need to perform conversions between the built-in types.
 To convert between types, you simply use the type name as a function.
