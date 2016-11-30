@@ -7,6 +7,7 @@ To convert between types, you simply use the type name as a function.
 There are several built-in functions to perform conversion from one data type to another.
 These functions return a new object representing the converted value.
 
+
 +------------------------+--------------------------------------------------------------------------+
 | Function               | Description                                                              |
 +========================+==========================================================================+
@@ -46,4 +47,3 @@ These functions return a new object representing the converted value.
 +------------------------+--------------------------------------------------------------------------+
 | oct(x)                 | Converts an integer to an octal string.                                  |
 +------------------------+--------------------------------------------------------------------------+
-
