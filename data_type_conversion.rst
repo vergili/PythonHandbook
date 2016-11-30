@@ -7,6 +7,18 @@ To convert between types, you simply use the type name as a function.
 There are several built-in functions to perform conversion from one data type to another.
 These functions return a new object representing the converted value.
 
++------------+------------+-----------+ 
+| Header 1   | Header 2   | Header 3  | 
++============+============+===========+ 
+| body row 1 | column 2   | column 3  | 
++------------+------------+-----------+ 
+| body row 2 | Cells may span columns.| 
++------------+------------+-----------+ 
+| body row 3 | Cells may  | - Cells   | 
++------------+ span rows. | - contain | 
+| body row 4 |            | - blocks. | 
++------------+------------+-----------+
+
 +------------+--------------+
 | Function   | Description  |
 +============+==============+
