@@ -1,9 +1,9 @@
 Access Modifiers in Python (Public, Protected, Private)
 -------------------------------------------------------
-
-This module implements specialized container datatypes providing alternatives to Python’s general purpose built-in
-containers, dict, list, set, and tuple.
-
+Languages like c++ or java have access modifiers to restrict connection from outside of class etc.
+but in python there is no a restriction to access any function or variable. In python all function and variables have
+access inside or outside of a class. The only way is just inform user about access with '_' (protected)
+or '__' (private) prefixes.
 
 Public
 ^^^^^^
@@ -23,7 +23,6 @@ you just do nothing. See the example below:
 
         def empty(self):
             self.content = None
-
 
 
 Protected
