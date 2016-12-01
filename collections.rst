@@ -11,10 +11,10 @@ subclass that calls a factory function to supply missing values
 .. code:: python
 
     from collections import defaultdict
-
     d = defaultdict(int)
 
-
+    >>> d
+    defaultdict(<type 'int'>, {})
 
 OrderedDict	dict
 ^^^^^^^^^^^^^^^^
