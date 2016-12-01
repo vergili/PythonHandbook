@@ -15,6 +15,19 @@ subclass that calls a factory function to supply missing values
 
     >>> d
     defaultdict(<type 'int'>, {})
+    >>> d[0]
+    0
+    >>> d[1]
+    0
+    >>> d['a']
+    0
+
+    s = defaultdict(str)
+    >>> s[0]
+    ''
+    >>> s['x']
+    ''
+
 
 OrderedDict	dict
 ^^^^^^^^^^^^^^^^

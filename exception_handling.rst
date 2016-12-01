@@ -5,6 +5,13 @@ An exception is an unforeseen error that occurs when a program is running.
 
 
 
+Built-in Exceptions
+^^^^^^^^^^^^^^^^^^^
+
+https://docs.python.org/2.7/library/exceptions.html#ZeroDivisionError
+
+
+
 try except finally else
 ^^^^^^^^^^^^^^^^^^^^^^^
 
