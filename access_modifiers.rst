@@ -13,16 +13,15 @@ you just do nothing. See the example below:
 
 .. code:: python
 
-    class Cup:
+    class Pet:
         def __init__(self):
-            self.color = None
-            self.content = None
+            self.species = None
 
-        def fill(self, beverage):
-            self.content = beverage
+        def fill(self, species):
+            self.species = species
 
         def empty(self):
-            self.content = None
+            self.species = None
 
 Private
 ^^^^^^^
@@ -61,7 +60,7 @@ This method will work but not suggested since __species is a private variable
 .. code:: python
 
     pet = Pet()
-    pet._Pet__species = "van"
+    pet._Pet__species = "cat"
     pet.show()
 
 
@@ -69,7 +68,7 @@ This is the suggested way to fill species
 .. code:: python
 
     pet = Pet()
-    pet.fill('van')
+    pet.fill('cat')
     pet.show()
 
 
@@ -85,24 +84,23 @@ underscore, you’re telling others “don’t touch this, unless you’re a sub
 
 .. code:: python
 
-    class Cup:
+    class Pet:
         def __init__(self):
-            self.color = None
-            self._content = None # protected variable
+            self._species = None   # protected variable
 
-        def fill(self, beverage):
-            self._content = beverage
+        def fill(self, species):
+            self._species = species
 
         def empty(self):
-            self._content = None
+            self._species = None
 
-Same example as before, but the content of the cup is now protected. This changes virtually nothing, you’ll
-still be able to access the variable from outside the class, only if you see something like this:
+Same example as before, but the species of the pet is now protected. This changes virtually nothing, you’ll
+still be able to access the variable from outside of the class.
 
 .. code:: python
 
-    cup = Cup()
-    cup._content = "tea"
+    pet = Pet()
+    pet._species = "cat"
 
 you explain politely to the person responsible for this, that the variable is protected and he should not
 access it or even worse, change it from outside the class.
