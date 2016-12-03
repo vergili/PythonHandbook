@@ -57,6 +57,7 @@ To reach a private member of class we have to call like this:
 
 
 This method will work but not suggested since __species is a private variable
+
 .. code:: python
 
     pet = Pet()
@@ -65,6 +66,7 @@ This method will work but not suggested since __species is a private variable
 
 
 This is the suggested way to fill species
+
 .. code:: python
 
     pet = Pet()
