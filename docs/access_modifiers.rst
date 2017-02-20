@@ -29,9 +29,10 @@ Private
 In python a private variable or method started with at least two underscores and suffixed with at most one underscore
 
 Example Naming rule:
+
 ``__my_variable`` or ``___my_variable``  or  ``__my_variable_``
 
-``__my_method()`` or ``___my_variable()``  or  ``__my_variable_()``
+``__my_method()`` or ``___my_method()``  or  ``__my_method_()``
 
 Python support to reach private members from outside of the class but it is mandatory to add ``_ClassName`` prefix
 

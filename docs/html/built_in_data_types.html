@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Built-in Types &mdash; Python Tips 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Python Tips 0.1 documentation" href="index.html"/>
+        <link rel="next" title="4. Classes" href="classes.html"/>
+        <link rel="prev" title="2. Airflow" href="airflow.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python Tips
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="access_modifiers.html">1. Access Modifiers in Python (Public, Protected, Private)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="airflow.html">2. Airflow</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Built-in Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#numeric-types">3.1. Numeric Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iterator-types">3.2. Iterator Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sequences">3.3. Sequences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">4. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collections.html">5. Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_type_conversion.html">6. Data Types Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_handling.html">7. Exception Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">8. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functools.html">9. Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generators.html">10. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linked_lists.html">11. Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">12. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">13. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflection.html">14. Recursion</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Python Tips</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>3. Built-in Types</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/built_in_data_types.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="built-in-types">
+<h1>3. Built-in Types<a class="headerlink" href="#built-in-types" title="Permalink to this headline">¶</a></h1>
+<p>Python is dynamically typed, this means that you don&#8217;t need to state the types of
+variables when you declare them or anything like that. You can do things like x=111
+and then x=&#8221;I&#8217;m a string&#8221; without error.</p>
+<p>In python values have type there is no type for variables like other dynamically typed languages.</p>
+<div class="section" id="numeric-types">
+<h2>3.1. Numeric Types<a class="headerlink" href="#numeric-types" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>int: Integers; equivalent to C longs in Python 2.x, non-limited length in Python 3.x</li>
+<li>long: Long integers of non-limited length; exists only in Python 2.x</li>
+<li>float: Floating-Point numbers, equivalent to C doubles</li>
+<li>complex: Complex Numbers</li>
+</ul>
+</div>
+<div class="section" id="iterator-types">
+<h2>3.2. Iterator Types<a class="headerlink" href="#iterator-types" title="Permalink to this headline">¶</a></h2>
+<p>Python supports a concept of iteration over containers. This is implemented using two distinct methods;
+these are used to allow user-defined classes to support iteration. Sequences, described below in more detail,
+always support the iteration methods.</p>
+<p>One method needs to be defined for container objects to provide iteration support:</p>
+<p>container.__iter__()</p>
+<p>Return an iterator object. The object is required to support the iterator protocol described below.
+If a container supports different types of iteration, additional methods can be provided to specifically
+request iterators for those iteration types. (An example of an object supporting multiple forms of iteration
+would be a tree structure which supports both breadth-first and depth-first traversal.) This method corresponds
+to the tp_iter slot of the type structure for Python objects in the Python/C API.</p>
+<p>The iterator objects themselves are required to support the following two methods, which together form the iterator protocol:</p>
+<p>iterator.__iter__()</p>
+<p>Return the iterator object itself. This is required to allow both containers and iterators to be used with
+the for and in statements. This method corresponds to the tp_iter slot of the type structure for Python objects in the Python/C API.</p>
+<p>iterator.__next__()</p>
+<p>Return the next item from the container. If there are no further items, raise the StopIteration exception.
+This method corresponds to the tp_iternext slot of the type structure for Python objects in the Python/C API.</p>
+<p>Python defines several iterator objects to support iteration over general and specific sequence types, dictionaries, a
+nd other more specialized forms. The specific types are not important beyond their implementation of the iterator protocol.</p>
+<p>Once an iterator’s __next__() method raises StopIteration, it must continue to do so on subsequent calls.
+Implementations that do not obey this property are deemed broken.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">my_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iter</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iter</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">my_iter</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_iter</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+
+<span class="nb">next</span><span class="p">(</span><span class="n">my_iter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sequences">
+<h2>3.3. Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>str: String; represented as a sequence of 8-bit characters in Python 2.x, but as a sequence of Unicode characters (in the range of U+0000 - U+10FFFF) in Python 3.x</li>
+<li>bytes: a sequence of integers in the range of 0-255; only available in Python 3.x</li>
+<li>byte array: like bytes, but mutable (see below); only available in Python 3.x</li>
+<li>list</li>
+<li>tuple</li>
+</ul>
+<p>Debugging is also something which once mastered can greatly enhance your
+bug hunting skills. Most of the newcomers neglect the importance of the
+Python debugger (<code class="docutils literal"><span class="pre">pdb</span></code>). In this section I am going to tell you only a
+few important commands. You can learn more about it from the official
+documentation.</p>
+<p><strong>Running from commandline</strong></p>
+<p>You can run a script from the commandline using the Python debugger.
+Here is an example:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span>$ python -m pdb my_script.py
+</pre></div>
+</div>
+<p>It would cause the debugger to stop the execution on the first statement
+it finds. This is helpful if your script is short. You can then inspect
+the variables and continue execution line-by-line.</p>
+<p><strong>Running from inside a script</strong></p>
+<p>You can set break points in the script itself so that you can inspect
+the variables and stuff at particular points. This is possible using the
+<code class="docutils literal"><span class="pre">pdb.set_trace()</span></code> method. Here is an example:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pdb</span>
+
+<span class="k">def</span> <span class="nf">make_bread</span><span class="p">():</span>
+    <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+    <span class="k">return</span> <span class="s2">&quot;I don&#39;t have time&quot;</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">make_bread</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Try running the above script after saving it. You would enter the
+debugger as soon as you run it. Now it&#8217;s time to learn some of the
+commands of the debugger.</p>
+<p><strong>Commands:</strong></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classes.html" class="btn btn-neutral float-right" title="4. Classes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="airflow.html" class="btn btn-neutral" title="2. Airflow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Muhammad Yasoob Ullah Khalid.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

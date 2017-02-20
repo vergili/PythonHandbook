@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Data Types Conversion &mdash; Python Tips 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Python Tips 0.1 documentation" href="index.html"/>
+        <link rel="next" title="8. Exception Handling" href="exception_handling.html"/>
+        <link rel="prev" title="6. Decorators" href="decorators.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python Tips
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="access_modifiers.html">1. Access Modifiers in Python (Public, Protected, Private)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="airflow.html">2. Airflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built_in_data_types.html">3. Built-in Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">4. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collections.html">5. Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">6. Decorators</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">7. Data Types Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_handling.html">8. Exception Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">9. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functools.html">10. Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generators.html">11. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linked_lists.html">12. Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">13. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">14. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflection.html">15. Recursion</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Python Tips</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>7. Data Types Conversion</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/data_type_conversion.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-types-conversion">
+<h1>7. Data Types Conversion<a class="headerlink" href="#data-types-conversion" title="Permalink to this headline">¶</a></h1>
+<p>Data Type Conversion
+Sometimes, you may need to perform conversions between the built-in types.
+To convert between types, you simply use the type name as a function.</p>
+<p>There are several built-in functions to perform conversion from one data type to another.
+These functions return a new object representing the converted value.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><dl class="first last docutils">
+<dt>int(x [,base])</dt>
+<dd><code class="docutils literal"><span class="pre">default</span> <span class="pre">base=10</span></code></dd>
+</dl>
+</td>
+<td><dl class="first last docutils">
+<dt>Converts x to an integer. base specifies the base if x is a string.</dt>
+<dd><code class="docutils literal"><span class="pre">Exp:</span> <span class="pre">int('11111111',</span> <span class="pre">2)</span> <span class="pre">=</span> <span class="pre">255</span></code></dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>long(x [,base] )</td>
+<td>Converts x to a long integer. base specifies the base if x is a string.</td>
+</tr>
+<tr class="row-even"><td>float(x)</td>
+<td>Converts x to a floating-point number.</td>
+</tr>
+<tr class="row-odd"><td>complex(real [,imag])</td>
+<td>Creates a complex number.</td>
+</tr>
+<tr class="row-even"><td>float(x)</td>
+<td>Converts x to a floating-point number.</td>
+</tr>
+<tr class="row-odd"><td>str(x)</td>
+<td>Converts object x to a string representation.</td>
+</tr>
+<tr class="row-even"><td>repr(x)</td>
+<td>Converts object x to an expression string.</td>
+</tr>
+<tr class="row-odd"><td>eval(str)</td>
+<td>Evaluates a string and returns an object.</td>
+</tr>
+<tr class="row-even"><td>tuple(s)</td>
+<td>Converts s to a tuple.</td>
+</tr>
+<tr class="row-odd"><td>list(s)</td>
+<td>Converts s to a list.</td>
+</tr>
+<tr class="row-even"><td>set(s)</td>
+<td>Converts s to a set.</td>
+</tr>
+<tr class="row-odd"><td>dict(d)</td>
+<td>Creates a dictionary. d must be a sequence of (key,value) tuples.</td>
+</tr>
+<tr class="row-even"><td>frozenset(s)</td>
+<td>Converts s to a frozen set.</td>
+</tr>
+<tr class="row-odd"><td>chr(x)</td>
+<td>Converts an integer to a character.</td>
+</tr>
+<tr class="row-even"><td>unichr(x)</td>
+<td>Converts an integer to a Unicode character.</td>
+</tr>
+<tr class="row-odd"><td>ord(x)</td>
+<td>Converts a single character to its integer value.</td>
+</tr>
+<tr class="row-even"><td>hex(x)</td>
+<td>Converts an integer to a hexadecimal string.</td>
+</tr>
+<tr class="row-odd"><td>oct(x)</td>
+<td>Converts an integer to an octal string.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exception_handling.html" class="btn btn-neutral float-right" title="8. Exception Handling" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="decorators.html" class="btn btn-neutral" title="6. Decorators" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Muhammad Yasoob Ullah Khalid.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

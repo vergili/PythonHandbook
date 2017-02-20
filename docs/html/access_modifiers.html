@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Access Modifiers in Python (Public, Protected, Private) &mdash; Python Tips 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Python Tips 0.1 documentation" href="index.html"/>
+        <link rel="next" title="2. Airflow" href="airflow.html"/>
+        <link rel="prev" title="Python Handbook" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python Tips
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Access Modifiers in Python (Public, Protected, Private)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#public">1.1. Public</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#private">1.2. Private</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#protected">1.3. Protected</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="airflow.html">2. Airflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built_in_data_types.html">3. Built-in Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">4. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collections.html">5. Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_type_conversion.html">6. Data Types Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_handling.html">7. Exception Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">8. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functools.html">9. Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generators.html">10. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linked_lists.html">11. Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">12. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">13. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflection.html">14. Recursion</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Python Tips</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>1. Access Modifiers in Python (Public, Protected, Private)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/access_modifiers.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="access-modifiers-in-python-public-protected-private">
+<h1>1. Access Modifiers in Python (Public, Protected, Private)<a class="headerlink" href="#access-modifiers-in-python-public-protected-private" title="Permalink to this headline">¶</a></h1>
+<p>Languages like c++ or java have access modifiers to restrict connection from outside of class etc.
+but in python there is no restriction to access any function or variable. In python all function and variables have
+access inside or outside of a class. The only way is just inform user about access with &#8216;_&#8217; (protected)
+or &#8216;__&#8217; (private) prefixes.</p>
+<div class="section" id="public">
+<h2>1.1. Public<a class="headerlink" href="#public" title="Permalink to this headline">¶</a></h2>
+<p>All member variables and methods are public by default in Python. So when you want to make your member public,
+you just do nothing. See the example below:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pet</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">fill</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+
+    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="bp">None</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="private">
+<h2>1.2. Private<a class="headerlink" href="#private" title="Permalink to this headline">¶</a></h2>
+<p>In python a private variable or method started with at least two underscores and suffixed with at most one underscore</p>
+<p>Example Naming rule:</p>
+<p><code class="docutils literal"><span class="pre">__my_variable</span></code> or <code class="docutils literal"><span class="pre">___my_variable</span></code>  or  <code class="docutils literal"><span class="pre">__my_variable_</span></code></p>
+<p><code class="docutils literal"><span class="pre">__my_method()</span></code> or <code class="docutils literal"><span class="pre">___my_method()</span></code>  or  <code class="docutils literal"><span class="pre">__my_method_()</span></code></p>
+<p>Python support to reach private members from outside of the class but it is mandatory to add <code class="docutils literal"><span class="pre">_ClassName</span></code> prefix</p>
+<p>To reach a private member of class we have to call like this:</p>
+<p><code class="docutils literal"><span class="pre">_ClassName__my_variable</span></code></p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pet</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__species</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c1"># private variable</span>
+
+    <span class="k">def</span> <span class="nf">fill</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__species</span> <span class="o">=</span> <span class="n">species</span>
+
+    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__species</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">__species</span>
+</pre></div>
+</div>
+<p>This method will work but not suggested since __species is a private variable</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="n">pet</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">()</span>
+<span class="n">pet</span><span class="o">.</span><span class="n">_Pet__species</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>
+<span class="n">pet</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is the suggested way to fill species</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="n">pet</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">()</span>
+<span class="n">pet</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">)</span>
+<span class="n">pet</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="protected">
+<h2>1.3. Protected<a class="headerlink" href="#protected" title="Permalink to this headline">¶</a></h2>
+<p>Protected member is (in C++ and Java) accessible only from within the class and it’s subclasses. How to
+accomplish this in Python? The answer is – by convention. By prefixing the name of your member with a single
+underscore, you’re telling others “don’t touch this, unless you’re a subclass”. See the example below:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">protected prefix (_) is just to inform user there is no any restriction like private modifiers (__) in python.</p>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pet</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_species</span> <span class="o">=</span> <span class="bp">None</span>   <span class="c1"># protected variable</span>
+
+    <span class="k">def</span> <span class="nf">fill</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_species</span> <span class="o">=</span> <span class="n">species</span>
+
+    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_species</span> <span class="o">=</span> <span class="bp">None</span>
+</pre></div>
+</div>
+<p>Same example as before, but the species of the pet is now protected. This changes virtually nothing, you’ll
+still be able to access the variable from outside of the class.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="n">pet</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">()</span>
+<span class="n">pet</span><span class="o">.</span><span class="n">_species</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>
+</pre></div>
+</div>
+<p>you explain politely to the person responsible for this, that the variable is protected and he should not
+access it or even worse, change it from outside the class.</p>
+<p><strong>References:</strong>
+<a class="reference external" href="https://docs.python.org/3/tutorial/classes.html#private-variables">https://docs.python.org/3/tutorial/classes.html#private-variables</a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="airflow.html" class="btn btn-neutral float-right" title="2. Airflow" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Python Handbook" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Muhammad Yasoob Ullah Khalid.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

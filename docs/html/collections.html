@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Collections &mdash; Python Tips 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Python Tips 0.1 documentation" href="index.html"/>
+        <link rel="next" title="6. Data Types Conversion" href="data_type_conversion.html"/>
+        <link rel="prev" title="4. Classes" href="classes.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python Tips
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="access_modifiers.html">1. Access Modifiers in Python (Public, Protected, Private)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="airflow.html">2. Airflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built_in_data_types.html">3. Built-in Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">4. Classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Collections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#defaultdict-dict">5.1. defaultdict     dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ordereddict-dict">5.2. OrderedDict     dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#counter-dict">5.3. Counter dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#namedtuple">5.4. namedtuple()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deque">5.5. deque</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_type_conversion.html">6. Data Types Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_handling.html">7. Exception Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">8. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functools.html">9. Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generators.html">10. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linked_lists.html">11. Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">12. Built-in Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">13. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflection.html">14. Recursion</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Python Tips</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>5. Collections</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/collections.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="collections">
+<h1>5. Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h1>
+<p>This module implements specialized container datatypes providing alternatives to Python’s general purpose built-in
+containers, dict, list, set, and tuple.</p>
+<div class="section" id="defaultdict-dict">
+<h2>5.1. defaultdict     dict<a class="headerlink" href="#defaultdict-dict" title="Permalink to this headline">¶</a></h2>
+<p>subclass that calls a factory function to supply missing values</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span>from collections import defaultdict
+d = defaultdict(int)
+
+&gt;&gt;&gt; d
+defaultdict(&lt;type &#39;int&#39;&gt;, {})
+&gt;&gt;&gt; d[0]
+0
+&gt;&gt;&gt; d[1]
+0
+&gt;&gt;&gt; d[&#39;a&#39;]
+0
+
+s = defaultdict(str)
+&gt;&gt;&gt; s[0]
+&#39;&#39;
+&gt;&gt;&gt; s[&#39;x&#39;]
+&#39;&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="ordereddict-dict">
+<h2>5.2. OrderedDict     dict<a class="headerlink" href="#ordereddict-dict" title="Permalink to this headline">¶</a></h2>
+<p>subclass that remembers the order entries were added</p>
+</div>
+<div class="section" id="counter-dict">
+<h2>5.3. Counter dict<a class="headerlink" href="#counter-dict" title="Permalink to this headline">¶</a></h2>
+<p>subclass for counting hashable objects</p>
+</div>
+<div class="section" id="namedtuple">
+<h2>5.4. namedtuple()<a class="headerlink" href="#namedtuple" title="Permalink to this headline">¶</a></h2>
+<p>factory function for creating tuple subclasses with named fields</p>
+</div>
+<div class="section" id="deque">
+<h2>5.5. deque<a class="headerlink" href="#deque" title="Permalink to this headline">¶</a></h2>
+<p>list-like container with fast appends and pops on either end</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data_type_conversion.html" class="btn btn-neutral float-right" title="6. Data Types Conversion" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classes.html" class="btn btn-neutral" title="4. Classes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Muhammad Yasoob Ullah Khalid.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
