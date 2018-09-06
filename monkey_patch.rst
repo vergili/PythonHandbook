@@ -34,3 +34,9 @@ describe how it actually behaves.
 **Reference
 http://stackoverflow.com/questions/5626193/what-is-a-monkey-patch
 
+**Python unit test best practice to avoid monkey patching bug
+https://stackoverflow.com/questions/47041257/python-unit-test-best-practice-to-avoid-monkey-patching-bug
+
+
+
+
